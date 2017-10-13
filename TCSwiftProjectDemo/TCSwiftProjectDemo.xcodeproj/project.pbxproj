@@ -15,6 +15,12 @@
 		83290C0F1F904C360052F286 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83290C0D1F904C360052F286 /* LaunchScreen.storyboard */; };
 		83290C1A1F904C360052F286 /* TCSwiftProjectDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83290C191F904C360052F286 /* TCSwiftProjectDemoTests.swift */; };
 		83290C251F904C360052F286 /* TCSwiftProjectDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83290C241F904C360052F286 /* TCSwiftProjectDemoUITests.swift */; };
+		83290C391F90665D0052F286 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83290C381F90665D0052F286 /* UIView+Extension.swift */; };
+		83290C3B1F9067180052F286 /* UITableView+EmptyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83290C3A1F9067180052F286 /* UITableView+EmptyData.swift */; };
+		83290C3E1F9068F80052F286 /* TCVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83290C3D1F9068F80052F286 /* TCVerticalButton.swift */; };
+		83290C401F908A3A0052F286 /* TCDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83290C3F1F908A3A0052F286 /* TCDefine.swift */; };
+		83290C431F908CF00052F286 /* TCRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83290C421F908CF00052F286 /* TCRequest.swift */; };
+		83290C451F9091A10052F286 /* TCConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83290C441F9091A10052F286 /* TCConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		83290C201F904C360052F286 /* TCSwiftProjectDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCSwiftProjectDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83290C241F904C360052F286 /* TCSwiftProjectDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCSwiftProjectDemoUITests.swift; sourceTree = "<group>"; };
 		83290C261F904C360052F286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83290C381F90665D0052F286 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		83290C3A1F9067180052F286 /* UITableView+EmptyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyData.swift"; sourceTree = "<group>"; };
+		83290C3D1F9068F80052F286 /* TCVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCVerticalButton.swift; sourceTree = "<group>"; };
+		83290C3F1F908A3A0052F286 /* TCDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDefine.swift; sourceTree = "<group>"; };
+		83290C421F908CF00052F286 /* TCRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCRequest.swift; sourceTree = "<group>"; };
+		83290C441F9091A10052F286 /* TCConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +124,7 @@
 		83290C031F904C350052F286 /* TCSwiftProjectDemo */ = {
 			isa = PBXGroup;
 			children = (
+				83290C321F90657F0052F286 /* Common */,
 				83290C041F904C350052F286 /* AppDelegate.swift */,
 				83290C061F904C360052F286 /* ViewController.swift */,
 				83290C081F904C360052F286 /* Main.storyboard */,
@@ -138,6 +151,75 @@
 				83290C261F904C360052F286 /* Info.plist */,
 			);
 			path = TCSwiftProjectDemoUITests;
+			sourceTree = "<group>";
+		};
+		83290C321F90657F0052F286 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				83290C3C1F9068CD0052F286 /* CostomerUI */,
+				83290C371F9065CF0052F286 /* Category */,
+				83290C361F9065B70052F286 /* Constant */,
+				83290C351F9065AB0052F286 /* Utility */,
+				83290C341F9065A50052F286 /* Base */,
+				83290C331F90659A0052F286 /* WebViewBridge */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		83290C331F90659A0052F286 /* WebViewBridge */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WebViewBridge;
+			sourceTree = "<group>";
+		};
+		83290C341F9065A50052F286 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		83290C351F9065AB0052F286 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				83290C411F908CDA0052F286 /* TCRequest */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		83290C361F9065B70052F286 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				83290C3F1F908A3A0052F286 /* TCDefine.swift */,
+				83290C441F9091A10052F286 /* TCConfig.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		83290C371F9065CF0052F286 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				83290C381F90665D0052F286 /* UIView+Extension.swift */,
+				83290C3A1F9067180052F286 /* UITableView+EmptyData.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		83290C3C1F9068CD0052F286 /* CostomerUI */ = {
+			isa = PBXGroup;
+			children = (
+				83290C3D1F9068F80052F286 /* TCVerticalButton.swift */,
+			);
+			path = CostomerUI;
+			sourceTree = "<group>";
+		};
+		83290C411F908CDA0052F286 /* TCRequest */ = {
+			isa = PBXGroup;
+			children = (
+				83290C421F908CF00052F286 /* TCRequest.swift */,
+			);
+			path = TCRequest;
 			sourceTree = "<group>";
 		};
 		B09AED5CA9F92131EF65D6E4 /* Pods */ = {
@@ -350,8 +432,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83290C391F90665D0052F286 /* UIView+Extension.swift in Sources */,
+				83290C3E1F9068F80052F286 /* TCVerticalButton.swift in Sources */,
 				83290C071F904C360052F286 /* ViewController.swift in Sources */,
+				83290C431F908CF00052F286 /* TCRequest.swift in Sources */,
 				83290C051F904C350052F286 /* AppDelegate.swift in Sources */,
+				83290C3B1F9067180052F286 /* UITableView+EmptyData.swift in Sources */,
+				83290C451F9091A10052F286 /* TCConfig.swift in Sources */,
+				83290C401F908A3A0052F286 /* TCDefine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +613,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
@@ -540,6 +629,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};
