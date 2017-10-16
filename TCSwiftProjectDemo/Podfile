@@ -3,12 +3,16 @@ platform :ios, "8.0"
 use_frameworks!
 
 target "TCSwiftProjectDemo" do
-pod 'SVProgressHUD'
+#Swift
 pod 'SnapKit'
 pod 'Kingfisher'
 pod 'Alamofire'
 pod 'SwiftyJSON'
+
+#OC
 pod 'WebViewJavascriptBridge', '~> 5.0'
+pod 'SVProgressHUD'
+pod 'AliyunOSSiOS'
 
 end
 

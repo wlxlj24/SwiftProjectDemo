@@ -8,12 +8,12 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 import SVProgressHUD
+import SwiftyJSON
 
 //简写的 key->value
 public typealias tc_parameters = [String : String]?
-public typealias CompleteClosure = (JSON) ->Void
+public typealias CompleteClosure = (JSON) -> Void
 public typealias FailureClosure = (NSError) -> Void
 
 let timeoutInterval:TimeInterval = 30;
@@ -57,7 +57,7 @@ extension TCRequest {
                          failure:@escaping CompleteClosure,
                          error:@escaping FailureClosure) -> () {
         
-        let headers:HTTPHeaders = requestHeaders()
+        let headers:HTTPHeaders = requestHeaders()!
         
         requestWith(URL: URL, paras: paras, headerField: headers, httpMethod: .post) { (response) in
             guard response.result.isSuccess else {
@@ -93,7 +93,7 @@ extension TCRequest {
                          failure:@escaping CompleteClosure,
                          error:@escaping FailureClosure) -> () {
         
-        let headers:HTTPHeaders = requestHeaders()
+        let headers:HTTPHeaders = requestHeaders()!
         
         requestWith(URL: URL, paras: paras, headerField: headers, httpMethod: .get) { (response) in
             guard response.result.isSuccess else {
@@ -137,11 +137,16 @@ extension TCRequest {
     }
     
     
-    private class func requestHeaders() -> Dictionary<String,String> {
+    private class func requestHeaders() -> tc_parameters {
         return ["device":"iOS",
                 "network":"",
                 "version":"",
                 "Accept":""]
+    }
+    
+    private class func handleRSA(dict:tc_parameters) -> tc_parameters {
+        let rsaDict = ["":""]
+        return rsaDict
     }
     
     

@@ -13,7 +13,7 @@ class TCVerticalButton: UIButton {
     
     var imgURL:String? {
         didSet {
-            imageView?.kf.setImage(with: imgURL as! Resource)
+            imageView?.kf.setImage(with: imgURL as? Resource)
         }
     }
     
